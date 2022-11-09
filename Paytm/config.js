@@ -1,4 +1,4 @@
-var PaytmConfig = {
+let PaytmConfig = {
     mid: "tmRoBh90182073607271",
     key: "fAPNNg3!h3K60ZsM",
     website: "WEBSTAGING",
