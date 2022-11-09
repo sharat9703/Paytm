@@ -41,7 +41,7 @@ if(!paymentDetails.amount || !paymentDetails.customerId || !paymentDetails.custo
     params['CUST_ID'] = paymentDetails.customerId;
     params['TXN_AMOUNT'] = paymentDetails.amount;
     /* where is app is hosted (heroku url)*/
-    params['CALLBACK_URL'] = 'https://amazon--clone-site.herokuapp.com/callback';
+    params['CALLBACK_URL'] = `https://amazon--clone-site.herokuapp.com/callback`;
     params['EMAIL'] = paymentDetails.customerEmail;
     params['MOBILE_NO'] = paymentDetails.customerPhone;
   
@@ -80,7 +80,7 @@ app.post("/callback", (req, res) => {
 
      // verify the checksum
      let checksumhash = post_data.CHECKSUMHASH;
-     // delete post_data.CHECKSUMHASH;
+      delete post_data.CHECKSUMHASH;
      let result = checksum_lib.verifychecksum(post_data, config.PaytmConfig.key, checksumhash);
      console.log("Checksum Result => ", result, "\n");
 
