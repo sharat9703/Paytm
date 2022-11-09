@@ -16,7 +16,7 @@
 },
 "keywords": [],
 "author": "",
-"license": "ISC",,
+"license": "ISC",
   "dependencies": {
     "cf-client3": "^0.0.1",
     "cf-http-client": "^1.3.0",
